@@ -1,6 +1,6 @@
 {
     "name": "betterjslogger",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
@@ -15,7 +15,7 @@
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\" \"lib/**/*.js\"",
         "prepair": "npm run build",
-        "prepublishOnly": "npm test $$ npm run build",
+        "prepublishOnly": "npm test && npm run build",
         "version": "npm run format && git add -A src"
     },
     "repository": {

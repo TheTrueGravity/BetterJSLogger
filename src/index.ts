@@ -13,7 +13,14 @@ export enum LogLevel {
     DEBUG,
     VERBOSE
 }
+
 export interface ILogger {
+    info(message: string, lable?: string): Promise<void>;
+    debug(message: string, lable?: string): Promise<void>;
+    error(message: string, lable?: string): Promise<void>;
+    verbose(message: string, lable?: string): Promise<void>;
+    warn(message: string, lable?: string): Promise<void>;
+
     log(level: LogLevel, message: string | Error, lable?: string): void;
 }
 
