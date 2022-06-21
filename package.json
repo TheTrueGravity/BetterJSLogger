@@ -1,19 +1,41 @@
 {
-  "name": "betterlogger",
-  "version": "0.0.1",
-  "description": "",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TheTrueGravity/BetterLogger.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TheTrueGravity/BetterLogger/issues"
-  },
-  "homepage": "https://github.com/TheTrueGravity/BetterLogger#readme"
+    "name": "betterlogger",
+    "version": "0.0.1",
+    "description": "",
+    "main": "src/index.ts",
+    "types": "lib/index.d.ts",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "scripts": {
+        "test": "jest --config jestconfig.json",
+        "build": "tsc",
+        "format": "prettier --write \"src/**/*.ts\" \"lib/**/*.js\"",
+        "prepair": "npm run build",
+        "prepublishOnly": "npm test",
+        "version": "npm run format && git add -A src"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/TheTrueGravity/BetterLogger.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/TheTrueGravity/BetterLogger/issues"
+    },
+    "homepage": "https://github.com/TheTrueGravity/BetterLogger#readme",
+    "devDependencies": {
+        "@types/jest": "^28.1.2",
+        "eslint": "^8.18.0",
+        "jest": "^28.1.1",
+        "prettier": "^2.7.1",
+        "ts-jest": "^28.0.5",
+        "tslint": "^6.1.3",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^4.7.4"
+    }
 }
